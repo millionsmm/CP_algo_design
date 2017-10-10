@@ -3,6 +3,8 @@ package com.example;
 import java.util.Scanner;
 
 /**
+ * Created by Wilber
+ * on 10/10/2017.
  * 滴滴出行的一道编程题。
  * 给定一个非空字符串, 按照如下方式编码, 使得编码后长度最小,返回编码后的长度:
  * 编码规则为: k[encoding_string], 表示重复k次encoding_strng,
