@@ -12,10 +12,9 @@ import java.util.Scanner;
  * 魔法机器2:如果投入x个魔法币,魔法机器会将其变为2x+2个魔法币
  * 小易采购魔法神器总共需要n个魔法币,所以小易只能通过两台魔法机器产生恰好n个魔法币,
  * 小易需要你帮他设计一个投入方案使他最后恰好拥有n个魔法币。
- * @
- * 输入包括一行,包括一个正整数n(1 ≤ n ≤ 10^9),表示小易需要的魔法币数量。
- * @
- * 输出一个字符串,每个字符表示该次小易选取投入的魔法机器。其中只包含字符'1'和'2'。
+ *
+ * @ 输入包括一行,包括一个正整数n(1 ≤ n ≤ 10^9),表示小易需要的魔法币数量。
+ * @ 输出一个字符串,每个字符表示该次小易选取投入的魔法机器。其中只包含字符'1'和'2'。
  */
 
 public class MagicCoins {
@@ -24,15 +23,16 @@ public class MagicCoins {
         int n = in.nextInt();
         System.out.print(getMethod(n));
     }
-    public static String getMethod(int n){
-        StringBuilder res=new StringBuilder();
-        while(n>0){
-            if (n%2==0){
+
+    public static String getMethod(int n) {
+        StringBuilder res = new StringBuilder();
+        while (n > 0) {
+            if (n % 2 == 0) {
                 res.append('2');
-                n=(n-2)/2;
-            }else {
+                n = (n - 2) / 2;
+            } else {
                 res.append('1');
-                n=(n-1)/2;
+                n = (n - 1) / 2;
             }
         }
         return res.reverse().toString();
