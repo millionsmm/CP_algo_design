@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.Scanner;
+
 /**
  * 滴滴出行的一道编程题。
  * 给定一个非空字符串, 按照如下方式编码, 使得编码后长度最小,返回编码后的长度:
@@ -17,7 +19,94 @@ package com.example;
  */
 public class DecodeString {
     public static void main(String[] args) {
-        System.out.print(1);
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+        if (s.length() < 5) System.out.println(s.length());
+        else {
+            System.out.println(decodeString(s).length());
+        }
     }
 
+    public static String decodeString(String str) {
+        if (str.length() <= 4) return str;
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = str.length() - 1; j > i; j--) {
+                if (str.charAt(j) != str.charAt(i)) continue;
+                int k = 0;
+                while (j + k < str.length() && str.charAt(i + k) == str.charAt(j + k)) ++k;
+                String base = str.substring(i, i + k);
+                int len = j - i;
+                if (len % k != 0) continue;
+                int num = len / k + 1;
+                if (3 + k >= j - i + k) continue;
+                int n = num - 1;
+                while (--n != 0) {
+                    if (base.equals(str.substring(i + n * k, i + n * k + k))) continue;
+                    else break;
+                }
+                if (n != 0) {
+                    continue;
+                } else {
+                    String res = str.substring(0, i);
+                    String numstr = String.valueOf(num);
+                    res += numstr;
+                    res += '[';
+                    res += decodeString(base);
+                    res += ']';
+                    res += str.substring(j + k);
+                    return res;
+                }
+
+            }
+        }
+        return str;
+    }
+    //    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        String str = in.next();
+//        int len = str.length();
+//        if (len < 5) System.out.println(len);
+//        else {
+//            int cur;
+//            int ret = len;
+//            String newStr = str;
+//            while (true) {
+//                boolean changed = false;
+//                for (cur = 0; cur < str.length() - 4; ++cur) {
+//                    for (int i = 1; i <= str.length() / 2; ++i) {
+//                        String res = decodeString(str, cur, i, ret);
+//                        if (!res.equals("")) {
+//                            ret = res.length();
+//                            newStr = res;
+//                            changed = true;
+//                        }
+//                    }
+//                }
+//                str = newStr;
+//                if (!changed || str.length() < 5) break;
+//            }
+//            System.out.println(ret);
+//        }
+//    }
+//
+//    public static String decodeString(String string, int cur, int len, int minLen) {
+//        int m = 1;
+//        String s = string.substring(cur, len);
+//        for (int i = len + cur; i < string.length() - len; i += len) {
+//            String temp = string.substring(i, len);
+//            if (!s.equals(temp)) break;
+//            ++m;
+//        }
+//        int ret = string.length() - m * len + len + 3;
+//        if (ret < minLen) {
+//            String res = string.substring(0, cur);
+//            res += String.valueOf(m);
+//            res += '[';
+//            res += s;
+//            res += ']';
+//            res += string.substring(cur + m * len, string.length());
+//            return res;
+//        }
+//        return string;
+//    }
 }
