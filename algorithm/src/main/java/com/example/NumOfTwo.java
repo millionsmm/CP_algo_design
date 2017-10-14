@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.Scanner;
+
 /**
  * Created by Wilber
  * on 2017/10/13.
@@ -15,7 +17,20 @@ package com.example;
  */
 
 public class NumOfTwo {
-    public static void main(String[] args){
-
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int dp[]=new int[n+1];
+        for (int i=0;i<=n;i++){
+            dp[i]=1;
+        }
+        int k=2;
+        while(k<=n){
+            for (int j=k;j<=n;j++){
+                dp[j]+=dp[j-k];
+            }
+            k=k*2;
+        }
+        System.out.print(dp[n]);
     }
 }
