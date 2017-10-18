@@ -9,7 +9,7 @@ package com.example;
  */
 
 public class MyLove {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
     }
 }

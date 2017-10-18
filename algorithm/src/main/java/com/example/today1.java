@@ -7,6 +7,7 @@ import java.util.Scanner;
 /**
  * Created by Wilber
  * on 17/10/2017.
+ * 推箱子
  */
 
 public class today1 {
@@ -23,7 +24,7 @@ public class today1 {
         m = in.nextInt();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; i++) {
-                mark[i][j] = (char) in.nextByte();
+                mark[i][j] = in.next().charAt(0);
                 if (mark[i][j] == 'E') {
                     ex = i;
                     ey = j;
