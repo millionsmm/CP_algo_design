@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 /**
@@ -17,6 +18,7 @@ public class SumOfTarget {
 
     public static void main(String args[]) {
         populateSubset(DATA, 0, DATA.length);
+        populateSubset(DATA, 0, new int[DATA.length], 0, TARGET_SUM);
     }
 
     /**
@@ -48,6 +50,40 @@ public class SumOfTarget {
         sb.append(TARGET_SUM).append("=");
         for (Integer integer : stack) {
             sb.append(integer).append("+");
+        }
+        System.out.println(sb.deleteCharAt(sb.length() - 1).toString());
+    }
+
+    /**
+     * 不使用栈的方法
+     *
+     * @param data
+     * @param fromIndex
+     * @param stack
+     * @param stack_len
+     * @param target
+     */
+    private static void populateSubset(final int[] data, int fromIndex, final int[] stack,
+                                       final int stack_len, final int target) {
+        if (target == 0) {
+            printResult(Arrays.copyOf(stack, stack_len));
+            return;
+        }
+        while (fromIndex < data.length && data[fromIndex] > target) {
+            fromIndex++;
+        }
+        while (fromIndex < data.length && data[fromIndex] <= target) {
+            stack[stack_len] = data[fromIndex];
+            populateSubset(data, fromIndex + 1, stack, stack_len + 1, target - data[fromIndex]);
+            fromIndex++;
+        }
+    }
+
+    private static void printResult(int[] copyOf) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(TARGET_SUM).append("=");
+        for (int i : copyOf) {
+            sb.append(i).append("+");
         }
         System.out.println(sb.deleteCharAt(sb.length() - 1).toString());
     }
