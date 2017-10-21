@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CP_algo_design.iml" filepath="$PROJECT_DIR$/CP_algo_design.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignModeReview.iml" filepath="$PROJECT_DIR$/DesignModeReview.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
