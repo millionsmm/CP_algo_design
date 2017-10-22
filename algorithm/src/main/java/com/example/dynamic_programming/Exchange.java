@@ -26,7 +26,7 @@ public class Exchange {
      * @param aim
      * @return
      */
-    public int countWays(int penny[], int n, int aim) {
+    public static int countWays(int penny[], int n, int aim) {
         if (n == 0 || penny == null || aim < 0) {
             return 0;
         }
@@ -47,5 +47,9 @@ public class Exchange {
             }
         }
         return pd[n - 1][aim];
+    }
+
+    public static void main(String args[]) {
+        countWays(new int[]{1, 2, 4}, 3, 5);
     }
 }
