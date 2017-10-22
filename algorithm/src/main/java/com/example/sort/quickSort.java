@@ -9,9 +9,9 @@ public class quickSort {
     /**
      * 普通快排
      *
-     * @param a
-     * @param p
-     * @param r
+     * @param a 数组
+     * @param p 左边的数
+     * @param r 右边的数
      */
     public static void quickSort(int a[], int p, int r) {
         if (p < r) {
