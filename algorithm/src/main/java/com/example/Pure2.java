@@ -17,16 +17,33 @@ public class Pure2 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int m = in.nextInt();
-        int[][] row = new int[n][m];
-        for (int i = 0; i < row.length; i++) {
-            for (int j = 0; j < row[0].length; j++) {
-                row[i][j] = in.nextInt();
+        int[][] map = new int[n][m];
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map[0].length; j++) {
+                map[i][j] = in.nextInt();
             }
         }
+        System.out.print(getMin(n, m, map));
     }
 
-    public int getMin(int n, int m, int[][] row) {
-        int[][] dp = new int[n][m];
-        return 0;
+    public static int getMin(int n, int m, int[][] map) {
+        if (map == null || map.length == 0 || map[0].length == 0) return 1;
+        int row = map.length;
+        int col = map[0].length;
+        int dp[][] = new int[row][col];
+        //反方向的动态规划
+        dp[row - 1][col - 1] = Math.max(-map[row - 1][col - 1] + 1, 1);
+        for (int i = 0; i < row - 2; i++) {
+            dp[i][col - 1] = Math.max(dp[i + 1][col - 1] - map[i][col - 1], 1);
+        }
+        for (int i = 0; i < col - 2; i++) {
+            dp[row - 1][i] = Math.max(dp[row - 1][i + 1] - map[row - 1][i], 1);
+        }
+        for (int i = 0; i < row - 2; i++) {
+            for (int j = 0; j < col - 2; j++) {
+                dp[i][j] = Math.max(Math.max(dp[i][j + 1] - map[i][j], 1), Math.max(dp[i + 1][j] - map[i][j], 1));
+            }
+        }
+        return dp[0][0];
     }
 }
