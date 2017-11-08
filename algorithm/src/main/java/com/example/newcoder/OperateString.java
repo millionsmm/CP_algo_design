@@ -25,13 +25,9 @@ public class OperateString {
             b.append(n[i]);
             i++;
             b.reverse();
+            b.append(" ");
             length--;
         }
-        String temp = b.toString();
-        StringBuilder result = new StringBuilder();
-        for (int i1 = 0; i1 < temp.length(); i1++) {
-            result.append(temp.charAt(i1)).append(" ");
-        }
-        return result.toString().trim();
+        return b.toString().trim();
     }
 }
