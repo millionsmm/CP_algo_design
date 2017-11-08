@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Wilber
  * on 8/11/2017.
+ * 40%
  */
 
 public class OperateString {
