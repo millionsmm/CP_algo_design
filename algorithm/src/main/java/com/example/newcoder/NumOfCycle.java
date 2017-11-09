@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * Created by Wilber
  * on 8/11/2017.
- * 求循环单词的种树
+ * 求循环单词的种数
  */
 
 public class NumOfCycle {
