@@ -1,6 +1,7 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 /**
+ * 去哪儿
  * Created by Wilber on 11/10/2017.
  * 一张机票的价格是由多个因素决定的，它通常与飞行距离没有直接的关系。许多旅行者于是在这方面变得非常有创意，
  * 当飞机在多个城市停靠时，只是用机票的一部分，以实现低花费的旅行。例如：北京到温哥华的机票可能卖8000元人民币，

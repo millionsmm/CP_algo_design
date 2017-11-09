@@ -1,8 +1,9 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 import java.util.Scanner;
 
 /**
+ * 完美世界
  * Created by Wilber
  * on 1/11/2017.
  * <p>

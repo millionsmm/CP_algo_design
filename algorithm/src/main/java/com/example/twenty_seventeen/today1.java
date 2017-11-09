@@ -1,10 +1,11 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
 /**
+ * 今日头条
  * Created by Wilber
  * on 17/10/2017.
  * 推箱子

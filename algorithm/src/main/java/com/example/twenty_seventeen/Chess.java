@@ -1,6 +1,7 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 /**
+ * 深信服
  * Created by Wilber
  * on 2017/10/13.
  * 函数calc计算围棋盘位置(x,y)处的棋子还有多少口气。

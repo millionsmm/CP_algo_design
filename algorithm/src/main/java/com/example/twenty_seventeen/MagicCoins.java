@@ -1,11 +1,11 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 import java.util.Scanner;
 
 /**
+ * NetEase.
  * Created by Wilber
  * on 10/10/2017.
- * NetEase.
  * 小易准备去魔法王国采购魔法神器,购买魔法神器需要使用魔法币,但是小易现在一枚魔法币都没有,
  * 但是小易有两台魔法机器可以通过投入x(x可以为0)个魔法币产生更多的魔法币。
  * 魔法机器1:如果投入x个魔法币,魔法机器会将其变为2x+1个魔法币

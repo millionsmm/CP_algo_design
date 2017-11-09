@@ -1,8 +1,9 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 import java.util.Scanner;
 
 /**
+ * 去哪儿
  * Created by Wilber
  * on 11/10/2017.
  * 最少转机：

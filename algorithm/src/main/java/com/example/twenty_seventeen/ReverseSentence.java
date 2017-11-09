@@ -1,4 +1,4 @@
-package com.example.newcoder;
+package com.example.twenty_seventeen;
 
 import java.util.Scanner;
 

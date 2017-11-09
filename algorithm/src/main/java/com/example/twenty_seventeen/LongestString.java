@@ -1,8 +1,9 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 import java.util.Scanner;
 
 /**
+ * 去哪儿
  * Created by Wilber
  * on 11/10/2017.
  * 同学们，我们刚刚经历了十一和中秋双节假期，让我们一起预祝我们的祖国繁荣富强，
