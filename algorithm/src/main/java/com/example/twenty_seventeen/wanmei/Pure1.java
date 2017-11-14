@@ -1,4 +1,4 @@
-package com.example.twenty_seventeen;
+package com.example.twenty_seventeen.wanmei;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.example.twenty_seventeen;
+package com.example.twenty_seventeen.netease;
 
 import java.util.Scanner;
 
