@@ -24,5 +24,5 @@ package com.example.twenty_seventeen;
  * 如果输入参数不合法，则返回Error。
  */
 
-public class LoseTIcket {
+public class LoseTicket {
 }
