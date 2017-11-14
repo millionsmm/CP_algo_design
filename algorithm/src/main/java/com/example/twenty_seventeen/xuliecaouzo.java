@@ -1,8 +1,9 @@
-package com.example;
+package com.example.twenty_seventeen;
 
 import java.util.Scanner;
 
 /**
+ * 美团点评
  * Created by Wilber
  * on 11/10/2017.
  * 有一天你得到了一个长度为 n 的序列，序列中的元素分别是 1,2,3,…,n。接下来你想对这个序列进行一些操作。
