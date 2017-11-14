@@ -3,6 +3,7 @@ package com.example;
 import java.util.Scanner;
 
 /**
+ * 美团点评
  * Created by Wilber
  * on 11/10/2017.
  * 对于一个十进制数而言，它的数位和等于将它各位数字相加得到的和。比如 231 的数位和是 6，3179 的数位和是 20。
