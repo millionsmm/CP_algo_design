@@ -5,7 +5,7 @@ package com.example.sort;
  * on 22/10/2017.
  */
 
-public class quickSort {
+public class QuickSort {
     /**
      * 普通快排
      *
