@@ -72,7 +72,7 @@ public class MaxMoney {
         int high = a.length - 1;
         int mid = 0;
         while (low <= high) {
-            mid = low + (high - low) >> 1;
+            mid = low + ((high - low) >> 1);
             if (a[mid] >= peo) {
                 high = mid - 1;
             } else {
