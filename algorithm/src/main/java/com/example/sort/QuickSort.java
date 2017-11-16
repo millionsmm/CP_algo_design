@@ -14,6 +14,7 @@ public class QuickSort {
      * @param r 右边的数
      */
     public static void quickSort(int a[], int p, int r) {
+        if (a == null || a.length < 2) return;
         if (p < r) {
             int q = partition(a, p, r);
             quickSort(a, p, q - 1);

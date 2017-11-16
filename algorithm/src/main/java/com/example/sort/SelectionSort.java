@@ -7,7 +7,7 @@ package com.example.sort;
 
 public class SelectionSort {
     public void selectionSort(int a[]) {
-        if (a.length < 2 || a == null) return;
+        if (a == null || a.length < 2) return;
         for (int i = 0; i < a.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < a.length; j++) {

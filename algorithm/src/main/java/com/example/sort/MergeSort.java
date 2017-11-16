@@ -7,7 +7,7 @@ package com.example.sort;
 
 public class MergeSort {
     public void mergeSort(int a[]) {
-        if (a.length < 2 || a == null) return;
+        if (a == null || a.length < 2) return;
         mergeSort(a, 0, a.length - 1);
     }
 
