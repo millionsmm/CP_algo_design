@@ -1,8 +1,9 @@
-package com.example;
+package com.example.twenty_seventeen.sangfor;
 
 import java.util.Scanner;
 
 /**
+ * 深信服
  * Created by Wilber
  * on 2017/10/13.
  * /*
