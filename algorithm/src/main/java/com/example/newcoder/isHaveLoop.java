@@ -5,6 +5,7 @@ import java.util.HashMap;
 /**
  * Created by Wilber
  * on 18/10/2017.
+ * 判断链表是否有环
  */
 
 public class isHaveLoop {
