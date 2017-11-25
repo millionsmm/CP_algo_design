@@ -18,7 +18,51 @@ import java.util.PriorityQueue;
 
 public class MedianHolder {
     private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(new MaxHeapComparator());
-    
+    private PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>(new MinHeapComparator());
+
+    private void modifyTwoHeapsSize() {
+        if (maxHeap.size() == minHeap.size() + 2) {
+            minHeap.add(maxHeap.poll());
+        }
+        if (minHeap.size() == maxHeap.size() + 2) {
+            maxHeap.add(minHeap.poll());
+        }
+    }
+
+    private void addNumber(int num) {
+        if (maxHeap.isEmpty()) {
+            maxHeap.add(num);
+            return;
+        }
+        if (maxHeap.peek() >= num) {
+            maxHeap.add(num);
+        } else {
+            if (minHeap.isEmpty()) {
+                minHeap.add(num);
+                return;
+            }
+            if (minHeap.peek() > num) {
+                maxHeap.add(num);
+            } else {
+                minHeap.add(num);
+            }
+        }
+        modifyTwoHeapsSize();
+    }
+
+    private Integer getMedian() {
+        int maxHeapSize = maxHeap.size();
+        int minHeapSize = minHeap.size();
+        if (maxHeapSize + minHeapSize == 0) {
+            return null;
+        }
+        Integer maxHeapHead = maxHeap.peek();
+        Integer minHeapHead = minHeap.peek();
+        if (((maxHeapSize + minHeapHead) & 1) == 0) {
+            return (maxHeapHead + minHeapHead) >> 1;
+        }
+        return maxHeapHead > minHeapHead ? maxHeapHead : minHeapHead;
+    }
 
     public class MaxHeapComparator implements Comparator<Integer> {
         @Override
