@@ -17,6 +17,13 @@ public class PreInPosTraversal {
         preOrderRecur(root.right);
     }
 
+    public void inOrderRecur(TreeNode root) {
+        if (root == null) return;
+        preOrderRecur(root.left);
+        System.out.print(root.value + " ");
+        preOrderRecur(root.right);
+    }
+
     public class TreeNode {
         public int value;
         public TreeNode left;
