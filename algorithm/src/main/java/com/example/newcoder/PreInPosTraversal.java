@@ -8,4 +8,22 @@ package com.example.newcoder;
  */
 
 public class PreInPosTraversal {
+    public void preOrderRecur(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.value + " ");
+        preOrderRecur(root.left);
+        preOrderRecur(root.right);
+    }
+
+    public class TreeNode {
+        public int value;
+        public TreeNode left;
+        public TreeNode right;
+
+        public TreeNode(int data) {
+            this.value = data;
+        }
+    }
 }
