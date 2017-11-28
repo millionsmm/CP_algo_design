@@ -50,6 +50,22 @@ public class PreInPosTraversal {
         }
     }
 
+    public void inOrderUnRecur(TreeNode root) {
+        if (root != null) {
+            Stack<TreeNode> stack = new Stack<>();
+            while (!stack.isEmpty() || root != null) {
+                if (root != null) {
+                    stack.push(root);
+                    root = root.left;
+                } else {
+                    root = stack.pop();
+                    System.out.print(root.value + " ");
+                    root = root.right;
+                }
+            }
+        }
+    }
+
     public class TreeNode {
         public int value;
         public TreeNode left;
