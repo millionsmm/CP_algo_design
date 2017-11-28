@@ -1,5 +1,7 @@
 package com.example.newcoder;
 
+import java.util.Stack;
+
 /**
  * Created by Wilber
  * on 2017-11-27 .
@@ -29,6 +31,23 @@ public class PreInPosTraversal {
         preOrderRecur(root.left);
         preOrderRecur(root.right);
         System.out.print(root.value + " ");
+    }
+
+    public void preOrderUnRecur(TreeNode root) {
+        if (root != null) {
+            Stack<TreeNode> stack = new Stack<>();
+            stack.add(root);
+            while (!stack.isEmpty()) {
+                root = stack.pop();
+                System.out.print(root.value + " ");
+                if (root.right != null) {
+                    stack.push(root.right);
+                }
+                if (root.left != null) {
+                    stack.push(root.left);
+                }
+            }
+        }
     }
 
     public class TreeNode {
