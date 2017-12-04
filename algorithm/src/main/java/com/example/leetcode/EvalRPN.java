@@ -12,7 +12,7 @@ import java.util.Stack;
  * ["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
  */
 
-public class evalRPN {
+public class EvalRPN {
     public int evalRPN(String[] tokens) {
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < tokens.length; i++) {
