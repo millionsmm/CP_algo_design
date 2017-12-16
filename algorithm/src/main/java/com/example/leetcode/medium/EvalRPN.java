@@ -1,4 +1,4 @@
-package com.example.leetcode;
+package com.example.leetcode.medium;
 
 import java.util.Stack;
 
