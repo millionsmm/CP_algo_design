@@ -21,5 +21,13 @@ package com.example.leetcode.easy;
  */
 
 public class HammingDistance {
-
+    public int hammingDistance1(int x, int y) {
+        int result = 0;
+        int temp = x ^ y;
+        while (temp != 0) {
+            result++;
+            temp &= temp - 1;
+        }
+        return result;
+    }
 }
