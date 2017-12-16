@@ -1,4 +1,4 @@
-package com.example.leetcode;
+package com.example.leetcode.hard;
 
 /**
  * Created by Wilber
