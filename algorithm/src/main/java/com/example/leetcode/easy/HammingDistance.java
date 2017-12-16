@@ -30,4 +30,8 @@ public class HammingDistance {
         }
         return result;
     }
+
+    public int hammingDistance2(int x, int y) {
+        return Integer.bitCount(x ^ y);
+    }
 }
