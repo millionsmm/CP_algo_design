@@ -22,6 +22,22 @@ import java.util.List;
 
 public class SelfDividingNumbers {
     public List<Integer> selfDividingNumbers(int left, int right) {
-        return new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
+        for (int i = left; i <= right; i++) {
+            if (ensure(i)) {
+                list.add(i);
+            }
+        }
+        return list;
     }
+
+    private boolean ensure(int i) {
+        String num = String.valueOf(i);
+        for (char c : num.toCharArray()) {
+            if (c == '0') return false;
+            if (i % (c - '0') != 0) return false;
+        }
+        return true;
+    }
+
 }
